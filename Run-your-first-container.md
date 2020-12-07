@@ -1,4 +1,4 @@
-### Exercise 1 - test docker installation
+### Test docker installation
 ```
 docker run hello-world
 ```

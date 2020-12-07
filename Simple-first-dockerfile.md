@@ -18,3 +18,8 @@ docker build -t hello-class .
 # run the container using hello-class image
 docker run --rm hello
 ```
+The final dockerfile looks like below
+```
+FROM debian:8
+CMD ["echo", "Hello Docker Class!!"]
+```
