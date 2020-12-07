@@ -2,7 +2,7 @@
 #### Linux
 ```
 1. Open an SSH client.
-2. Locate your private key file. <keyname>.pemRun this command, if necessary, to ensure your key is not publicly viewable.
+2. Locate your private key file. <keyname>.pem Run this command, if necessary, to ensure your key is not publicly viewable.
 chmod 400 RaGo.pem
 3. Connect to your instance using its Public IP
 Example:
