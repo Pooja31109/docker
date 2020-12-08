@@ -5,4 +5,4 @@
 4. [Write a Simple first dockerfile](Simple-first-dockerfile.md)
 5. [Create an image including files](Create-an-image-including-files.md)
 6. [Docker Images deeper dive](docker-images-deep-dive.md)
-7. 
+7. [Manage Containers deep dive](Manage-containers.md)
