@@ -1,9 +1,9 @@
-### Docker images deeper dive
+## Docker images deeper dive
 
 Let’s have fun with Docker images
 In this lab we will see how to create an image from a container. Even if this is not used very often it’s interesting to try it at least once. Then we will focus on the image creation using a Dockerfile. We will then see how to get the details of an image through the inspection and explore the filesystem to have a better understanding of what happens behind the hood. We will end this lab with the image API.
 
-#### Image creation from a container
+### Image creation from a container
 Let’s start by running an interactive shell in a ubuntu container.
 ```
 docker container run -ti ubuntu bash
@@ -11,7 +11,9 @@ docker container run -ti ubuntu bash
 we will install the figlet package in this container.
 ```
 apt-get update
+apt-get install apt-utils -y
 apt-get install -y figlet
+figlet hello
 ```
 We then exit from this container
 ```
@@ -49,7 +51,7 @@ This example shows that we can create a container, add all the libraries and bin
 
 In the following we will see how images are usually created, using a Dockerfile, which is a text file that contains all the instructions to build an image.
 
-#### Image creation using a Dockerfile
+### Image creation using a Dockerfile
 We will use a simple example in this section and build a hello world application in Node.js. We will start by creating a file in which we retrieve the hostname and display it.
 
 Copy the following content into index.js file.
@@ -106,7 +108,7 @@ Once again, the output will look like the following.
 ```
 hello from 4094ff6bffbd
 ```
-#### ENTRYPOINT vs COMMAND
+### ENTRYPOINT vs COMMAND
 In the 2 previous Dockerfile, we used CMD to define the command to be ran when a container is launched. As we have seen, there are several ways to define the command, using ENTRYPOINT and/or CMD. We will illustrate this on a new Dockerfile, named Dockerfile-v3, that as the following content.
 ```
 FROM alpine
@@ -143,7 +145,7 @@ PING 8.8.8.8 (8.8.8.8): 56 data bytes
 64 bytes from 8.8.8.8: seq=1 ttl=38 time=8.590 ms
 64 bytes from 8.8.8.8: seq=2 ttl=38 time=8.585 ms
 ```
-#### Image Inspection
+### Image Inspection
 As we have already seen with containers, and as we will see with other Docker’s components (volume, network, …), the inspect command is available for the image API and it returns all the information of the image provided.
 
 The alpine image should already be present locally, if it’s not, run the following command to pull it.
@@ -180,7 +182,7 @@ This should return amd64.
 
 Feel free to play with the Go template format and get familiar with it as it’s really handy.
 
-#### Filesystem exploration
+### Filesystem exploration
 We first stop and remove all containers from your host (you might not be able to remove images if containers are using some of the layers).
 ```
 docker container stop $(docker container ls -aq)
