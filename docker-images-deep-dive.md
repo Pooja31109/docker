@@ -11,6 +11,7 @@ docker container run -ti ubuntu bash
 we will install the figlet package in this container.
 ```
 apt-get update
+apt-get install apt-utils -y
 apt-get install -y figlet
 ```
 We then exit from this container
