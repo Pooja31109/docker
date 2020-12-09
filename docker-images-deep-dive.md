@@ -13,6 +13,7 @@ we will install the figlet package in this container.
 apt-get update
 apt-get install apt-utils -y
 apt-get install -y figlet
+figlet hello
 ```
 We then exit from this container
 ```
