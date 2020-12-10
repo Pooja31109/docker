@@ -8,5 +8,5 @@
 07. [Manage Containers deep dive](Manage-containers.md)
 08. [Understand Docker Networking](Networking.md)
 09. [Understand Docker volumes](Volumes.md)
-10. [Understand docker compose](Compose.md)
+10. [Understand docker compose](Compose-basics.md)
 11. [Understand docker swarm](Swarm.md)
