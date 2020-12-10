@@ -4,7 +4,7 @@ we are going to take a look at the basics of Docker networking and Docker volume
 Before we launch our application, let's download the container images we will be using, and also create the network:
 ```
 docker image pull redis:alpine
-docker image pull russmckendrick/moby-counter
+docker image pull rgodishela/moby-counter
 docker network create moby-counter
 ```
 Now that we have our images pulled and our network created, we can launch our containers, starting with the Redis one:
@@ -13,7 +13,7 @@ docker container run -d --name redis --network moby-counter redis:alpine
 ```
 Now that the Redis container is launched, we can launch the application container by running the following command:
 ```
-docker container run -d --name moby-counter --network moby-counter -p 8080:80 russmckendrick/moby-counter
+docker container run -d --name moby-counter --network moby-counter -p 8080:80 rgodishela/moby-counter
 ```
 All that remains now is to access the application. To do this, open your browser and go to http://localhost:8080/. You should be greeted by a mostly blank page, with the message Click to add logos…
 
@@ -32,7 +32,7 @@ docker container exec moby-counter cat /etc/resolv.conf
 Let's create a second network and launch another application container:
 ```
 docker network create moby-counter2
-docker run -itd --name moby-counter2 --network moby-counter2 -p 9090:80 russmckendrick/moby-counter
+docker run -itd --name moby-counter2 --network moby-counter2 -p 9090:80 rgodishela/moby-counter
 ```
 Now that we have the second application container up and running, let's try pinging the redis container from it:
 ```
