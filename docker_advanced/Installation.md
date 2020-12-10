@@ -1,6 +1,6 @@
 Install docker compose on Linux
 ```
-COMPOSEVERSION=1.25.4
+COMPOSEVERSION=1.27.4
 curl -L https://github.com/docker/compose/releases/download/$COMPOSEVERSION/docker-compose-`uname -s`-`uname -m`
 chmod +x /tmp/docker-compose
 sudo mv /tmp/docker-compose /usr/local/bin/docker-compose
