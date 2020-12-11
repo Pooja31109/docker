@@ -1,6 +1,6 @@
 ### Setting up a Swamr Cluster
 
-Intialize the first node which willbe our manager
+Intialize the first node which will be our manager
 ```
 docker swarm init --advertise-addr $(curl ifconfig.me)
 ```
@@ -10,8 +10,8 @@ Copy the the command from above output to add a new node to cluster
 docker swarm join --token <token> <swarm manager ip>:2377
 ```
 
-go to node 2, paste the command from above
-do it ditto in other nodes
+* go to node 2, paste the command from above
+* do it ditto in other nodes
 
 in any case, u forgot manager token, worker token
 ```
