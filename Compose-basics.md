@@ -36,7 +36,7 @@ def hello():
 ```
 redis is the hostname of the redis container on the application’s network. We use the default port for Redis, 6379.
 
-3. Create another file called requirements.txt in your project directory and paste this in:
+3. Create another file called `requirements.txt` in your project directory and paste this in:
 ```
 flask
 redis
