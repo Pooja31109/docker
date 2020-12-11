@@ -15,8 +15,8 @@ docker swarm join --token <token> <swarm manager ip>:2377
 
 in any case, u forgot manager token, worker token
 ```
-docker swarm join-token -q worker
-docker swarm join-token -q manager
+docker swarm join --token -q worker
+docker swarm join --token -q manager
 ```
 
 verify the cluster
