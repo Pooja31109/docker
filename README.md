@@ -13,3 +13,4 @@
 11. [portainer](portainer.md)
 12. [setup swarm cluster ( 1 manager, 1 or more workers )](swarm-installation.md)
 13. [Understand docker swarm](Swarm.md)
+14. [Try Minikube](minikube.md)
