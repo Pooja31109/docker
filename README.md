@@ -10,4 +10,5 @@
 09. [Understand Docker volumes](Volumes.md)
 10. [Install docker compose](./docker_advanced/Installation.md)
 10. [Understand docker compose](Compose-basics.md)
+11. [setup swarm cluster ( 1 manager, 1 or more workers )](swarm-installation.md)
 11. [Understand docker swarm](Swarm.md)
