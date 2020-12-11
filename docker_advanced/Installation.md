@@ -8,3 +8,7 @@ Test Docker compose version
 ```
 docker-compose version
 ```
+Get the docker-compose help
+```
+docker-compose help
+```
